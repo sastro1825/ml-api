@@ -19,7 +19,7 @@ async function postPredictHandler(request, h) {
     createdAt: createdAt,
   };
 
-  await storeData(id, data);
+  //await storeData(id, data);
 
   const response = h.response({
     status: "success",
@@ -37,7 +37,7 @@ async function predictHistories(request, h) {
   const { model } = request.server.app;
   const { Firestore } = require("@google-cloud/firestore");
   const db = new Firestore({
-    projectId: "submissionmlgc-attafriski",
+    projectId: "submissionmlgc-ridhofajar44",
   });
   const predictCollection = db.collection("predictions");
   const snapshot = await predictCollection.get();
